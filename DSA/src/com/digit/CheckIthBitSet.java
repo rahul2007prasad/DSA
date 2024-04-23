@@ -3,10 +3,10 @@ package com.digit;
 public class CheckIthBitSet {
 	public static void main(String[] args) {
 
-		boolean checkIthBitSet = checkIthBitSet(5,1);
+		boolean checkIthBitSet = checkIthBitSet(138,1);
 		System.out.println("Is Ith bit set :" + checkIthBitSet);
 		
-		boolean optimalSol = optimal(3, 2);
+		boolean optimalSol = optimal(138, 1);
 		System.out.println("Is Ith bit set :" + optimalSol);
 	}
 
@@ -17,7 +17,7 @@ public class CheckIthBitSet {
 		
 		Integer binaryNum = Integer.valueOf(convertDecimalToBnary);
 		
-		for(int i = convertDecimalToBnary.length()-1 ; i>0 ; i--) {
+		for(int i = convertDecimalToBnary.length()-1 ; i>=1 ; i--) {
 			if(convertDecimalToBnary.charAt(checkIndex-1)== '1')
 				return true;
 			else

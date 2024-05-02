@@ -9,6 +9,8 @@ public class DiameterOfbinaryTree {
 		Node createNode = createNode(arr);
 		int diameterOfBinaryTree = diameterOfBinaryTree(createNode);
 		System.out.println("Diameter of tree " + diameterOfBinaryTree);
+	
+	System.out.println("optimal height :" +diameterOptimal(createNode));
 	}
 
 	public static int calculateHeight(Node node) {
@@ -40,4 +42,28 @@ public class DiameterOfbinaryTree {
 		root.right.right = new Node(arr[6]);
 		return root;
 	}
+	
+	
+	//-----------
+	public static int diameterOptimal(Node root) {
+		int [] diameter = new int[1];
+		diameter[0] = 0;
+		height(root , diameter);
+		
+		return diameter[0];
+	}
+	public static int height(Node node , int[] diameter) {
+		
+		if(node  == null)
+			return 0;
+		int[] lh = new int[1];
+		int[] rh = new int[1];
+		lh[0] = height(node.left , diameter);
+		rh[0] = height(node.right , diameter);
+		
+		diameter[0] = Math.max(diameter[0],lh[0]+rh[0]);
+		
+		return 1 + Math.max(lh[0], rh[0]);
+	}
+	
 }

@@ -8,7 +8,7 @@ public class IsIdenticalTree {
 		Node createNode1 = createNode(arr1);
 		Node createNode2 = createNode(arr2);
 
-		System.out.println("Max path sum :"+ checkIdenttical(createNode1 , createNode2));
+		System.out.println("Max path sum :"+ checkIdentical(createNode1 , createNode2));
 
 	}
 

@@ -1,11 +1,8 @@
 package com.binary.tree;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
-import java.util.TreeSet;
 
 public class VerticalTraversal {
 	public static void main(String[] args) {
@@ -48,6 +45,7 @@ public static void getVerticalOrder(Node root , int hd , TreeMap<Integer, ArrayL
 		
 		for(Entry<Integer,ArrayList<Integer>> entry : map.entrySet()) {
 			System.out.println(entry.getValue());
+			ArrayList<Integer> value = entry.getValue();
 		}
 
 	}

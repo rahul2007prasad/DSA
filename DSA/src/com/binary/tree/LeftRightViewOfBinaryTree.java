@@ -25,6 +25,8 @@ public class LeftRightViewOfBinaryTree {
 		
 		//Optimal 
 		
+		
+		
 	}
 	
 	public static List<Integer> rightView(Node root) {
